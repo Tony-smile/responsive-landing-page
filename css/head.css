@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --paleCyan: hsl(193, 100%, 96%);
+    --darkCyan: hsl(192, 100%, 9%);
+    --grayishBlue: hsl(208, 11%, 55%);
+    --btncolor: hsl(322, 100%, 66%);
+    --activecolor: #f99bd4;
+    --fsize: 18px;
+  --fontfam1: font-family: 'Poppins';
+      --fontfam: font-family: 'Open Sans';
+}
+
+header {
+    background-color: var(--paleCyan);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 7em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8em;
+    
+}
+
+ button a{
+    text-decoration: none;
+    font-size: 2em;
+    color: var(--darkCyan);
+    font-weight: 700;
+}
+.menu-right button{
+    padding: 1.5em 6.5em;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 55px;
+    box-shadow: 0 0 30px #dbdfe0ea;
+}
+.more{
+    padding: 1.8em 8em;
+    border: none;
+    background-color: var(--btncolor);
+    border-radius: 55px;
+    margin-top: 3em;
+    box-shadow: 0 0 7px #e757e7ea;
+}
+ .more a{
+    color: #ffffff;
+}
+#menu {
+    display: flex;
+    flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  margin-top: 5em;
+  margin-left: 7em;
+  margin-right: 5em;
+  
+}
+.headcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    gap: 3em;
+
+}
+
+.headcontent .lefthead {
+    width: calc(100%/2);
+
+    margin-left: 5em;
+    margin-top: 10em;
+
+}
+h1{
+    font-family: 'Poppins';
+    color: var(--darkCyan);
+    font-size: 2.5em;
+}
+.lefthead p{
+    display: inline-block;
+     margin-top: 1em;
+     display:flex;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    color: var(--darkCyan);
+}
+.headcontent .righthead {
+    margin-top: 4em;
+    width: calc(100%/2);
+    height: 100%;
+    
+}
+
+img.illustration {
+    margin-top: 4em;
+    margin-right: 5em;
+    width:90%;
+    
+}

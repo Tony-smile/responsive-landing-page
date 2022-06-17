@@ -1,0 +1,75 @@
+@import url(./head.css);
+@import url(./main.css);
+@import url(./footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root{
+--paleCyan :hsla(192, 100%, 96%, 0.576);
+--darkCyan :hsl(192, 100%, 9%);
+--grayishBlue: hsl(208, 11%, 55%);
+--btncolor:#f158ba;
+--activecolor: #f99bd4;
+--fsize: 18px;
+--fontfam1: font-family: 'Poppins', sans-serif;
+--fontfam: font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background:  url("../Huddle-landing-page-Design/images/bg-hero-desktop.svg") no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 18px;
+
+}
+
+
+@media only screen and (max-width: 1023px) and (min-width: 200px) {
+    body{
+        background:  url("../Huddle-landing-page-Design/images/bg-hero-mobile.svg") no-repeat fixed center;
+        background-size: cover;
+        width: 100%;
+    }
+    header{
+        padding-top: 1em;
+    }
+    .menu-right button{
+        padding:8px 20px;
+       
+    }
+    #menu{
+flex-direction: row;
+        margin:0;
+       margin-top: 2em;
+       justify-content:center;
+      
+    }
+    .headcontent{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    .headcontent .lefthead{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0px 30px;
+    }
+.headcontent .righthead{
+    width: 100%;
+    margin-top: 2em;
+}
+button a{
+    font-size: 15px;
+}
+} 
