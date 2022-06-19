@@ -13,6 +13,7 @@
 }
 
 header {
+    background: url("../Huddle-landing-page-Design/images/bg-hero-desktop.svg") no-repeat fixed center;
     background-color: var(--paleCyan);
     background-attachment: fixed;
     background-size: cover;
@@ -27,7 +28,7 @@ header {
 
 .menu-right a{
     text-decoration: none;
-    font-size: .8em;
+    font-size: .8rem;
     color: var(--darkCyan);
     font-weight: 700;
     padding: 1.3em 5em;
