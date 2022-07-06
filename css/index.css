@@ -14,6 +14,7 @@
     --fsize: 18px;
     --fontfam1: font-family: 'Poppins', sans-serif;
     --fontfam: font-family: 'Open Sans', sans-serif;
+    --trans: all 400ms;
 }
 
 html,
@@ -34,7 +35,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-   background-color: #ffffff;
+    background-color: #ffffff;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -43,5 +44,27 @@ body {
     gap: 0;
 
 }
+.logo{
+    transition: var(--trans);
+}
+/* Animation  */
+@keyframes fadeup {
+    0% {
+        transform: translateY(50px);
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
 
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

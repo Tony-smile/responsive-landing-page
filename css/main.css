@@ -10,6 +10,7 @@
     --fsize: 18px;
     --fontfam1: font-family: 'Poppins', sans-serif;
     --fontfam: font-family: 'Open Sans', sans-serif;
+    --trans: all 400ms;
 }
 
 main {
@@ -40,6 +41,9 @@ main {
 
 img.ilust {
     width: 100%;
+    transition: var(--trans);
+    animation: fadeup 1s 5s forwards ease-out;
+    opacity: 0;
 }
 
 #second {
@@ -73,6 +77,9 @@ img.ilust {
     padding-top: 1em;
     font-size: 1.2em;
     color: var(--grayishBlue);
+    transition: var(--trans);
+    animation: fadeside 1s 5s forwards ease-out;
+    opacity: 0;
 }
 
 #separator {
@@ -88,10 +95,9 @@ img.ilust {
     width: 60%;
     background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 0 5px #e9ebec7e;
+    box-shadow: 0px -4px 3px 1px #e9ebec7e;
     padding:5em 0em;
-
-}
+   }
 
 #separator h1 {
     font-size: 2em;
@@ -110,4 +116,34 @@ img.ilust {
 #separator  a {
     font-size: 1.2em;
     color: #ffffff;
+}
+/* Animation  */
+@keyframes fadeup {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeside {
+    0% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

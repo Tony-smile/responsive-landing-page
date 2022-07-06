@@ -8,9 +8,12 @@
     --btncolor: hsl(322, 100%, 66%);
     --activecolor: #f99bd4;
     --fsize: 18px;
-  --fontfam1: font-family: 'Poppins';
-      --fontfam: font-family: 'Open Sans';
+    --fontfam1: font-family: 'Poppins';
+    --fontfam: font-family: 'Open Sans';
+    --trans: all 400ms;
 }
+
+
 
 header {
     background: url("../Huddle-landing-page-Design/images/bg-hero-desktop.svg") no-repeat fixed center;
@@ -22,11 +25,11 @@ header {
     display: flex;
     flex-direction: column;
     padding-bottom: 5em;
-    
+
 }
 
 
-.menu-right a{
+.menu-right a {
     text-decoration: none;
     font-size: .8rem;
     color: var(--darkCyan);
@@ -37,7 +40,8 @@ header {
     border-radius: 55px;
     box-shadow: 0 0 30px #dbdfe0ea;
 }
-.more{
+
+.more {
     text-decoration: none;
     font-size: .8em;
     padding: 1.3em 5em;
@@ -48,18 +52,22 @@ header {
     box-shadow: 0 0 2px #e757e7ea;
     color: #ffffff;
     font-weight: 700;
+    transition: var(--trans);
+    animation: fadesider 1.5s 2.8s forwards ease-in;
+    opacity: 0;
 }
- 
+
 #menu {
     display: flex;
     flex-direction: row;
-  align-items: center;
-  justify-content:space-between;
-  margin-top: 5em;
-  margin-left: 7em;
-  margin-right: 5em;
-  
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5em;
+    margin-left: 7em;
+    margin-right: 5em;
+
 }
+
 .headcontent {
     display: flex;
     flex-direction: row;
@@ -67,7 +75,7 @@ header {
     height: 100%;
     width: 100%;
     gap: 3em;
-
+transition: var(--trans);
 }
 
 .headcontent .lefthead {
@@ -77,49 +85,105 @@ header {
     margin-top: 8em;
 
 }
-h1{
+
+h1 {
     font-family: 'Poppins';
     color: var(--darkCyan);
     font-size: 2.5em;
+    transition: var(--trans);
+    animation: fadein 1s 1s forwards ease-in;
+
+    opacity: 0;
 }
-.lefthead p{
+
+.lefthead p {
     display: inline-block;
-     margin-top: 1em;
-     margin-bottom: 3em;
-     display:flex;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    display: flex;
     flex-wrap: wrap;
     font-size: 1.2em;
     font-weight: 400;
     font-family: 'Open Sans';
     color: var(--darkCyan);
+    transition: var(--trans);
+    animation: fadeside 1s 2.3s forwards ease-out;
+    opacity: 0;
 }
+
 .headcontent .righthead {
     margin-top: 4em;
     width: calc(100%/2);
     height: 100%;
-    
+
 }
 
 img.illustration {
     margin-top: 2em;
     margin-right: 5em;
-    width:90%;
+    width: 90%;
+    transition: var(--trans);
+    animation: fadeup 1s 3.2s forwards ease-out;
+    opacity: 0;
 }
-.more:hover{
+
+.more:hover {
     background-color: var(--activecolor);
 }
 
-#separator  .more:hover{
+#separator .more:hover {
 
- background-color: var(--activecolor);
+    background-color: var(--activecolor);
 }
-.social .fab:hover{
+
+.social .fab:hover {
     color: var(--btncolor);
     border: 1px solid var(--btncolor);
-   }
+}
 
-.menu-right a:hover{
-    background-color: rgba(255, 255, 255, 0.946);
+.menu-right a:hover {
+    /* background-color: rgba(255, 255, 255, 0.946);
     color: rgba(75, 90, 99, 0.726);
-    box-shadow: 0 0 8px #ece9e96a;
+    box-shadow: 0 0 8px #ece9e96a; */
+    opacity: 0.7;
+}
+
+/* Animation  */
+@keyframes fadeup {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeside {
+    0% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadesider {
+    0% {
+        transform: translateX(80px);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
